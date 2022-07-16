@@ -1,0 +1,24 @@
+// SPDX-License-Identifier: Unlicensed
+pragma solidity ^0.8.15;
+contract task1
+{
+    address owner;
+    uint8 a;
+    constructor(){
+    owner=0x5B38Da6a701c568545dCfcB03FcB875f56beddC4; //msg.sender;
+    a=1;
+    }
+    modifier onlyOwner()
+    {
+        require(msg.sender == owner, "Error");
+        _;
+    }
+    function getA() public view returns(uint8)
+    {
+        return(a);
+    }
+    function setA(uint8 _a) public onlyOwner 
+    {
+        a=_a;
+    }
+}

@@ -1,0 +1,28 @@
+// SPDX-License-Identifier: Unlicensed
+pragma solidity ^0.8.15;
+// contract updated_MyContract {
+//     string public value;
+
+//     constructor() public {
+//         value = "myvalue";
+//     }
+
+//       function set(string memory _value) public {
+//         value = _value;
+//     }
+// }
+// is s hm direct public ko dekha rh h k hm kia value le rh h....jb k agr string m 
+//public nh lkhe g to pta nh chle ga kso ko  bh k input kia h
+
+
+     //***************ANOTHER CODE******************
+
+// contract updated_MyContract {
+//     string public stringValue = "myString";
+//     bool public myBool = true;
+//     int public myInt = -1;
+//     uint public myUint = 1;
+//     uint8 public myUint8 = 8;
+//     uint256 public myUint256 = 99999;
+// }
+

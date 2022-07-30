@@ -1,0 +1,20 @@
+// SPDX-License-Identifier: Unlicensed
+pragma solidity ^0.8.15;
+// contract demo{
+//     mapping(uint=>string) public roll_no;
+//     function setter(uint keys,string memory value)public{
+//         roll_no[keys]=value;
+//     }
+// }
+
+//********************ANOTHER CODE****************
+// contract demo{
+//     struct Student{
+//         string name;
+//         uint class;
+//     }
+//     mapping(uint=>Student) public data;
+//     function setter(uint _roll,string memory _name , uint _class) public{
+//         data[_roll]=Student(_name,_class);
+//     }
+// }

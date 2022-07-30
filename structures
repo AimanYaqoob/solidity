@@ -1,0 +1,34 @@
+// SPDX-License-Identifier: Unlicensed
+pragma solidity ^0.8.15;
+
+// contract task3
+// {
+//     struct student{
+//         string name;
+//         string fathername;
+//         uint age;
+//         int marks;   
+//     }
+//     function getstruct () public pure returns(student memory ){
+//         student memory S=student('aiman','yaqoob',21,76);
+//         return S;
+//     }
+// }
+
+//**********STRUCT WITH ARRAYS******************
+
+// contract MyContract{
+//     Person[] public people;
+
+//     uint256  public peopleCount;
+
+//     struct Person {
+//         string _firstName;
+//         string _lastName;
+//     }
+
+//     function addPerson(string memory _firstName, string memory _lastName) public {
+//         people.push(Person(_firstName, _lastName));
+//         peopleCount += 1;
+//     }
+// }

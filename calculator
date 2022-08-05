@@ -51,3 +51,47 @@ contract calculator{
             }
     
 }
+
+//**********ANOTHER CODE*******************
+
+contract calculator
+{
+    uint8 _b;
+    uint8 _c;
+    function setAdd(uint8 b , uint8 c)public
+    {
+        _b = b;
+        _c = c;
+    }
+    function getAdd() public view returns(uint8){
+        uint8 sum = _b + _c;
+        return sum;
+    }
+    function setSub(uint8 b , uint8 c)public
+    {
+        _b = b;
+        _c = c;
+    }
+    function getSub() public view returns(uint8){
+        uint8 sub = _b - _c;
+        return sub;
+    }
+    function setMultiply(uint8 b , uint8 c)public
+    {
+        _b = b;
+        _c = c;
+    }
+    function getMultiply() public view returns(uint8){
+        uint8 multiply = _b * _c;
+        return multiply;
+    }
+    function setDivide(uint8 b , uint8 c)public
+    {
+        _b = b;
+        _c = c;
+    }
+    function getDivide() public view returns(uint8){
+        uint8 divide = _b  / _c;
+        return divide;
+    }
+}

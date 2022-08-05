@@ -32,3 +32,26 @@ pragma solidity ^0.8.15;
 //         peopleCount += 1;
 //     }
 // }
+ 
+ //////************ANOTHER CODE***************////////
+contract task1{
+    struct student{
+        string name;
+        string fname;
+        int R_no;
+    }
+    student Student;
+    
+    function setStudent() public{
+        Student=student('aiman','yaqoob',2);
+    }
+    function getStudent()public view returns(int){
+        return Student.R_no;
+    }
+    function getStudentName() public view returns(string memory){
+        return Student.name;
+    }
+    function getFatherName() public view returns(string memory){
+        return Student.fname;
+    }
+}

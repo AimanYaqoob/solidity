@@ -1,0 +1,47 @@
+// SPDX-License-Identifier: Unlicensed
+pragma solidity ^0.8.15;
+//TASK#01
+contract MyContract{
+
+    uint256 state_var;
+    function set(uint256 _state_var) public{
+    state_var = _state_var;
+    }
+
+    function get() public view returns (uint256){
+        return state_var;
+   }
+}
+
+//TASK#02
+contract MyContract{
+    function evaluate(uint256 a , uint256 b) public view returns(uint256) {
+        uint256 sum=(a+b);
+        uint256 diff=(a-b);
+        uint256 result = sum - diff;
+        return result;
+    }
+}
+
+//TASK#03
+contract MyContract {
+    function find(uint a) public view returns(uint) {
+        require(a > 0, "a  not be negative");
+        uint rem = a % 3;
+        return rem;
+        }
+}
+
+contract MyContract {
+    function average
+     (
+        uint256 a,
+        uint256 b,
+        uint256 c
+    ) 
+    public view returns (uint256) {
+        require(a > 0 && b > 0 && c > 0, "num not be neg");
+        return (a + b+ c) / 3;   
+    }
+}
+    

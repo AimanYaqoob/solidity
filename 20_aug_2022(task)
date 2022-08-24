@@ -1,0 +1,20 @@
+// SPDX-License-Identifier: Unlicensed
+pragma solidity ^0.8.15;
+
+ //TASK_01
+contract MyContract {
+   string public myString ="Hellow World";
+}
+
+//TASK-02
+contract MyVariable {
+    uint public state_var;
+    function returnStateVariable() public{
+    state_var=10;
+    }
+
+    uint public local_var;
+    function returnLocalVariable() public{
+    local_var=20;
+    }
+}

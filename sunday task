@@ -1,0 +1,101 @@
+///////////////////4-AUGUST-2022//////////////////
+// SPDX-License-Identifier: Unlicensed
+pragma solidity ^0.8.15;
+
+
+***********CONTRACT.SOL************
+// contract Contract1{
+//     uint public cont1_num=12;
+// }
+
+// contract MainContract{
+//     Contract1 cont=Contract1(0x5B38Da6a701c568545dCfcB03FcB875f56beddC4);
+//     uint public  main_num=100;
+
+//     function getNum() public view returns (uint){
+//         return cont.cont1_num();
+//     }
+
+//     function getAbdullah()
+// }
+
+
+
+/////////////&&&&&INTERFACE%%%%%%%////////////
+// 
+
+contract School {
+    string public schoolName = "ABC";
+    uint16 public ranking = 100;
+
+    function changeSchoolName(string memory _nam) public {
+        schoolName = _nam;
+    }
+
+    function getSchoolRanking() view public returns(uint16) {
+        return ranking;
+    }
+
+}
+
+interface School_Interface {
+    function schoolName() external view returns(string memory);
+    function changeSchoolName() external;
+}
+
+contract Main {
+     function getSchool(address contractAdress) public view returns(string memory) {
+        return School_Interface(contractAdress).schoolName();
+    }
+}
+
+
+
+
+
+**********EXAMPLE.SOL***********
+pragma solidity ^0.8.15;
+
+import "@chainlink/contracts/src/v0.8/interfaces/AggregatorV3Interface.sol";
+
+contract Update{
+    AggregatorV3Interface public abc=AggregatorV3Interface(0xD4a33860578De61DBAbDc8BFdb98FD742fA7028e);
+}
+
+
+************PERSON.SOL***************
+
+// SPDX-License-Identifier: Unlicensed
+pragma solidity ^0.8.15;
+
+contract Abdullah {
+    string public nameAbd = "Abdullah";
+}
+contract Maaz {
+    string public name = "Maaz";
+}
+
+
+
+
+************CHILD.SOL*****************
+// SPDX-License-Identifier: Unlicensed
+pragma solidity ^0.8.15;
+
+contract Child{
+    string public contractName="School";
+}
+contract Parent{
+    Child public cont;
+
+    function deploy() public  {
+        cont=new Child();
+    }
+
+    function getName() view public returns (string memory) {
+         return cont.contractName();
+    }
+}
+
+
+

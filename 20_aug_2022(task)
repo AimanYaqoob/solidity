@@ -67,3 +67,41 @@ contract MyContract {
         return (a + b+ c) / 3;   
     }
 }
+
+
+
+**********************************26-AUGUST-2022*********************************
+// SPDX-License-Identifier: Unlicensed
+pragma solidity ^0.8.15;
+**************//TASK#01***********
+contract MyContract{
+    function digitSum(uint256 n) public pure returns(uint256){
+        uint256 a;
+        uint256 sum=0;
+        while (n > 0){
+            a=n%10;
+            sum=sum+a;
+            n=n/10;
+        }
+        return sum;
+    }
+}
+****************//TASK#02**************
+contract MyContract{
+    function nthTerm(
+        uint256 n,
+        uint256 a,
+        uint256 b,
+        uint256 c
+    ) public pure returns (uint256) {
+        uint256[100] memory arr;
+        uint256 i;
+        arr[1]=a;
+        arr[2]=b;
+        arr[3]=c;
+        for(i=4 ; i<=n ; i++){
+            arr[i]=arr[i-1]+arr[i-2]+arr[i-3];
+        }
+        return arr[n];
+    }
+}
